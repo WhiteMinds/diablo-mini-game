@@ -1,0 +1,35 @@
+{
+  "name": "mini-game",
+  "version": "0.1.0",
+  "main": null,
+  "license": "MIT",
+  "scripts": {
+    "start": "poi -r ts-node/register --parallel --serve ./src",
+    "build": "poi -r ts-node/register --parallel ./src"
+  },
+  "devDependencies": {
+    "@poi/plugin-typescript": "^12.2.1",
+    "@types/node": "^13.9.0",
+    "@types/poi": "^12.5.0",
+    "@typescript-eslint/eslint-plugin": "^2.22.0",
+    "@typescript-eslint/parser": "^2.22.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "poi": "^12.7.5",
+    "prettier": "^1.19.1",
+    "react-hot-loader": "^4.12.19",
+    "sass": "^1.26.2",
+    "sass-loader": "^8.0.2",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "@c4605/toolconfs": "^5.1.0",
+    "@types/react": "^16.9.23",
+    "@types/react-dom": "^16.9.5",
+    "astroturf": "^0.10.2",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0"
+  },
+  "prettier": "@c4605/toolconfs/prettierrc"
+}
