@@ -1,9 +1,8 @@
-import { EntityTemplates } from './entity_templates'
 import { MapDifficulty } from '@/const'
 
 export const BloodMoor = {
   name: '鲜血荒地',
-  EntityTemplates,
+  EntityTemplates: [require('@/entity_templates/Fallen')],
   areaLevel: {
     [MapDifficulty.Normal]: 1,
     [MapDifficulty.Nightmare]: 36,
