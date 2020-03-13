@@ -2,22 +2,17 @@ import 'react-hot-loader'
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 import { css } from 'astroturf'
-import { PlayerCard } from '@/components/PlayerCard'
+import { GameScreen } from '@/views/GameScreen'
 
 function renderApp(): void {
-  ReactDOM.render(
-    <div>
-      <PlayerCard />
-    </div>,
-    document.getElementById('app')!,
-  )
+  ReactDOM.render(<GameScreen />, document.getElementById('app'))
 }
 
 renderApp()
 ;(module as any).hot.accept(renderApp)
 
 css`
-  h1 {
-    font-size: 32px;
+  body {
+    margin: 0;
   }
 `

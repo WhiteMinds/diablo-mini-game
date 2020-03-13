@@ -6,11 +6,12 @@ import {
   Typography,
   LinearProgress,
   Box,
+  CardActionArea,
 } from '@material-ui/core'
 
 const useStyles = makeStyles({
   root: {
-    width: 'fit-content',
+    width: '100%',
     minWidth: 275,
   },
   title: {
@@ -44,31 +45,33 @@ export const PlayerCard = (): JSX.Element => {
 
   return (
     <Card className={classes.root}>
-      <CardContent>
-        <Typography
-          className={classes.title}
-          color="textSecondary"
-          gutterBottom
-        >
-          亡灵法师
-        </Typography>
-        <Typography variant="h5" component="h2">
-          WhiteMind
-        </Typography>
-        <Typography className={classes.pos} color="textSecondary">
-          15级（100 / 500）
-        </Typography>
-        <Typography color="textSecondary">
-          <HealthBar variant="determinate" value={90} />
-          <Box textAlign="right" my={1}>
-            生命值（100 / 90）
-          </Box>
-          <ManaBar variant="determinate" value={50} />
-          <Box textAlign="right" mt={1}>
-            法力值（50 / 100）
-          </Box>
-        </Typography>
-      </CardContent>
+      <CardActionArea>
+        <CardContent>
+          <Typography
+            className={classes.title}
+            color="textSecondary"
+            gutterBottom
+          >
+            亡灵法师
+          </Typography>
+          <Typography variant="h5" component="h2">
+            WhiteMind
+          </Typography>
+          <Typography className={classes.pos} color="textSecondary">
+            15级（100 / 500）
+          </Typography>
+          <Typography color="textSecondary">
+            <HealthBar variant="determinate" value={90} />
+            <Box textAlign="right" my={1}>
+              生命值（100 / 90）
+            </Box>
+            <ManaBar variant="determinate" value={50} />
+            <Box textAlign="right" mt={1}>
+              法力值（50 / 100）
+            </Box>
+          </Typography>
+        </CardContent>
+      </CardActionArea>
     </Card>
   )
 }
