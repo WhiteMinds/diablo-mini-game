@@ -19,6 +19,7 @@ const useStyles = makeStyles({
   root: {
     width: '100%',
     minWidth: 275,
+    height: '100%',
   },
   pos: {
     marginBottom: 12,

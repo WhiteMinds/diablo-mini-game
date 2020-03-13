@@ -60,18 +60,20 @@ export const PlayerCard = (): JSX.Element => {
           <Typography className={classes.pos} color="textSecondary">
             15级（100 / 500）
           </Typography>
-          <Typography color="textSecondary">
-            <HealthBar variant="determinate" value={90} />
-            <Box textAlign="right" my={1}>
-              生命值（100 / 90）
-            </Box>
-            <ManaBar variant="determinate" value={50} />
-            <Box textAlign="right" mt={1}>
-              法力值（50 / 100）
-            </Box>
-          </Typography>
         </CardContent>
       </CardActionArea>
+      <CardContent>
+        <Typography color="textSecondary">
+          <HealthBar variant="determinate" value={(100 / 120) * 100} />
+          <Box textAlign="right" my={1}>
+            生命值（100 / 120）
+          </Box>
+          <ManaBar variant="determinate" value={50} />
+          <Box textAlign="right" mt={1}>
+            法力值（50 / 100）
+          </Box>
+        </Typography>
+      </CardContent>
     </Card>
   )
 }
