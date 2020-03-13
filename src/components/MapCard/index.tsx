@@ -29,7 +29,7 @@ export const MapCard = (): JSX.Element => {
   const classes = useStyles()
   const [value, setValue] = React.useState(0)
 
-  const handleChange = (event: any, newValue: number) => {
+  const handleChange = (_: any, newValue: number): void => {
     setValue(newValue)
   }
 
@@ -56,15 +56,17 @@ export const MapCard = (): JSX.Element => {
         </Tabs>
         <Divider />
         <List component="nav">
-          <ListItem>
-            <ListItemText primary="阿卡拉" secondary="盲人修女" />
-            <IconButton edge="end" style={{ marginRight: 8 }}>
-              <ForumIcon />
-            </IconButton>
-            <IconButton edge="end">
-              <MenuIcon />
-            </IconButton>
-          </ListItem>
+          {value === 0 ? (
+            <ListItem>
+              <ListItemText primary="阿卡拉" secondary="盲人修女" />
+              <IconButton edge="end" style={{ marginRight: 8 }}>
+                <ForumIcon />
+              </IconButton>
+              <IconButton edge="end">
+                <MenuIcon />
+              </IconButton>
+            </ListItem>
+          ) : null}
         </List>
       </CardContent>
     </Card>

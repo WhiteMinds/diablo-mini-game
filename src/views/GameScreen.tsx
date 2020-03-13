@@ -6,21 +6,29 @@ import { LoggingCard } from '@/components/LoggingCard'
 
 export const GameScreen = (): JSX.Element => {
   return (
-    <Box m={1}>
-      <Grid container spacing={1}>
-        <Grid item xs={3}>
-          <PlayerCard />
-        </Grid>
+    <div
+      style={{
+        width: '100vw',
+        height: '100vh',
+        overflow: 'hidden',
+      }}
+    >
+      <Box m={1}>
+        <Grid container spacing={2}>
+          <Grid item xs={3}>
+            <PlayerCard />
+          </Grid>
 
-        <Grid container item spacing={1}>
-          <Grid item xs>
-            <MapCard />
-          </Grid>
-          <Grid item xs>
-            <LoggingCard />
+          <Grid container item spacing={2}>
+            <Grid item xs>
+              <MapCard />
+            </Grid>
+            <Grid item xs>
+              <LoggingCard />
+            </Grid>
           </Grid>
         </Grid>
-      </Grid>
-    </Box>
+      </Box>
+    </div>
   )
 }
