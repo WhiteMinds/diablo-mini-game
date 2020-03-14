@@ -16,4 +16,8 @@ css`
     margin: 0;
     background: #f5f5f5;
   }
+
+  ::-webkit-scrollbar {
+    width: 0;
+  }
 `

@@ -41,7 +41,11 @@ export const LoggingCard = (): JSX.Element => {
   return (
     <Card className={classes.root}>
       <CardActions style={{ justifyContent: 'space-between' }}>
-        <Button endIcon={<ArrowDropDownIcon />} onClick={handleClick}>
+        <Button
+          size="large"
+          endIcon={<ArrowDropDownIcon />}
+          onClick={handleClick}
+        >
           全部信息
         </Button>
         <Menu

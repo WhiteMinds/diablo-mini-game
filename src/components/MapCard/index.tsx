@@ -3,6 +3,7 @@ import {
   Card,
   CardContent,
   Divider,
+  Icon,
   IconButton,
   List,
   ListItem,
@@ -18,8 +19,20 @@ import { makeStyles } from '@material-ui/core/styles'
 const useStyles = makeStyles({
   root: {
     width: '100%',
-    minWidth: 275,
+    minWidth: 400,
     height: '100%',
+  },
+  container: {
+    display: 'flex',
+    flexDirection: 'column',
+    maxHeight: '100%',
+    flexGrow: 1,
+    boxSizing: 'border-box',
+  },
+  list: {
+    flexGrow: 1,
+    minHeight: 0,
+    overflowY: 'auto',
   },
   pos: {
     marginBottom: 12,
@@ -36,7 +49,7 @@ export const MapCard = (): JSX.Element => {
 
   return (
     <Card className={classes.root}>
-      <CardContent>
+      <CardContent className={classes.container}>
         <Typography variant="h5" component="h2">
           萝格营地
         </Typography>
@@ -53,10 +66,10 @@ export const MapCard = (): JSX.Element => {
           aria-label="disabled tabs example"
         >
           <Tab label="友善（1）" />
-          <Tab label="敌意（0）" />
+          <Tab label="敌意（12）" />
         </Tabs>
         <Divider />
-        <List component="nav">
+        <List component="nav" className={classes.list}>
           {value === 0 ? (
             <ListItem>
               <ListItemText primary="阿卡拉" secondary="盲人修女" />
@@ -67,8 +80,30 @@ export const MapCard = (): JSX.Element => {
                 <MenuIcon />
               </IconButton>
             </ListItem>
-          ) : null}
+          ) : (
+            new Array(12).fill(0).map((_, idx) => (
+              <ListItem key={idx}>
+                <ListItemText
+                  primary={
+                    <div>
+                      枯萎之{' '}
+                      <span style={{ color: '#ff8888' }}>火焰强化的</span>{' '}
+                      沉沦魔
+                    </div>
+                  }
+                  secondary="Level 1"
+                />
+                <IconButton edge="end" style={{ marginRight: 8 }}>
+                  <Icon className="iconfont icon-swords" />
+                </IconButton>
+                <IconButton edge="end">
+                  <MenuIcon />
+                </IconButton>
+              </ListItem>
+            ))
+          )}
         </List>
+        <Divider />
       </CardContent>
     </Card>
   )
