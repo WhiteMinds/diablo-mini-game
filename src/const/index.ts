@@ -11,3 +11,7 @@ export const MapDifficulty = {
   4: '史诗',
   5: '神话',
 }
+
+export const MonsterModifier = {
+  A: 1,
+}
